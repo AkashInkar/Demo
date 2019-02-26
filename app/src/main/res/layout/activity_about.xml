@@ -1,14 +1,336 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
-    tools:context=".activity.AboutActivity">
-    <ImageView
+    tools:context=".activity.WorkActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/demoapp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/bgimg"/>
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/lblname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Nidhi Pramod Shinde"
+                    android:textColor="#ffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/call"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_call" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/demoapp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingBottom="40dp"
+            android:background="@drawable/whitebg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dear brothers and sisters,"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  You have elected us in the General Election of the 	Municipal Corporation of Mumbai Two years have passed 	since February 23, 2019. On this occasion, various works 	performed in the division,	We are very happy to present the book form 	and online KaryAhwaal in front of you on various occasions such	as work on the works, ongoing works and administrative clearances.	Our Prabhag is geographically distant, especially in the hills	of Bharat Nagar, Vishnu Nagar. The two villages are situated in Gavangaon, 	Anikagavan.Projected buildings rehabilitated from various parts of 	Mumbai are also in your area. Prayag Nagar, Prakash Nagar, Jyoti Nagar 	is a slum area, and MSEB and H.P.C.L. Colony East are in their respective areas.Different refineries and various companies are wielding their ward and the problem of the traffic congestion created by them lies in the local population. "
+                android:textColor="#131414"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Since last 20 years as a Shiv Sena office bearer, there was a complete understanding of the problems in the area. "
+                android:textColor="#131414"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="After getting elected, continuously following the necessary steps to solve the problem, by questioning the different"
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:text=" platforms of the municipal corporation, we have succeeded in overcome many problems by using various instruments."
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:text="For many years, road improvement has been done in urban areas. Work has been completed in Vishnu Nagar due to planned ,"
+                android:textColor="#131414"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" labor and work has started at Gavangaon, Bharat Nagar. The work of Anikagavaca will also be started after Mahashivaratri. "
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:text=" These works will give a great relief to the residents. We have to work very hard to stop polluting RMC plants to damage the"
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="health of people of Pryang Nagar and Prakash Nagar, due to the opening of the health center and hospital in Vishnu Nagar. "
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" The battle is going on in court now. After getting the announcement, after getting the BD Patil road and L.U. Gadkari Marg "
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" cement, the Central Government has got administrative approval for the development of rain water harvesting and monitoring "
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="channels. This work will be started after the completion of the tender process and thousands of citizens will be traveling. "
+                android:textColor="#131414"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="It will be safe and easy It was even worse than the brigade of Radharas. Effortlessly working with awareness Due to the"
+                android:textColor="#131414"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" improvement of the surrounding area of ​​the building, the local population has improved. Nearly 90% of toilets in the division  have been dilapidated and new constructions were very necessary. All these municipal corporations have declared dangerous."
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" Taking new toilets in the area was a challenge. On behalf of Municipal Corporation, four new toilets have been started and  new construction works have started and the work will be started at Gavangaon, Anik village and other places soon. While  doing these highlights, the basic needs of the department include drainage, water supply, roads, footsteps, internal roads, toilets, street lighting systems, etc. And we have been successful in getting much approval for administrative approval. "
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" In this work, we have succeeded in doing these works due to the guidance and cooperation from local residents, Municipal  officials, employees, Police administration, all the honorable persons, Shivsena office bearers and Shivsainik from time to time. "
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" Goddess festivities should be maintained in such a way."
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="While working in the division, we have always been working for people of all walks of life by teaching Balasaheb's work for caste, creed, faction and religion. Shiv Sena Chief Uddhav Saheb Thakre gave us the opportunity because we could serve as our people's representative and continue to do the service continuously."
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Thanks!"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Your humble"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#131414"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Mrs.Nidhi pramod shinde"
+                android:textColor="#131414"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="40dp"
+                android:text="Mr. Pramod Vasant Shinde"
+                android:textColor="#131414"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/bottombar"
+        android:backgroundTint="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btnfacebok"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/spnnierbackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/facebook" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btninstagram"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bottombar"
+                android:backgroundTint="@color/colorPrimary"
+                android:scaleType="fitXY"
+                android:src="@drawable/instagram" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btntwitter"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/spnnierbackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/twitter" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btnweb"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/spnnierbackground"
+                android:backgroundTint="@color/colorPrimary"
+                android:scaleType="fitXY"
+                android:src="@drawable/web" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btnyoutube"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/spnnierbackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/fullsizeyoutube" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AboutActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/demoapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/lblname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="निधी प्रमोद शिंदे"
+                    android:textColor="#ffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/call"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_call" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="45dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/demoapp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/whitebg"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="प्रिय बंधू आणि भगिनींनो,  "
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="   \
+                  आपण मुंबई महानगरपालिकेच्या सार्वत्रिक निवडणुकीमध्ये आम्हाला निवडून दिले याला 23 फेब्रुवारी 2019 ला दोन वर्षे पूर्ण झाली आहेत. या निमित्ताने प्रभागात केलेली विविध कामे, सुरू असलेली कामे, व प्रशासकीय मंजुरी मिळालेल्या कामाचा अहवाल पुस्तक रूपाने व ऑनलाइन कार्यहवाल आपणा समोर सादर करताना आम्हाला  अत्यंत आनंद होत आहे. आपला विभाग हा भौगोलिक दृष्ट्या दूरवर पसरलेला असून विशेषतः भारत नगर, विष्णू नगर हा डोंगर भागात वसलेला आहे. गव्हाणगाव, अनिकगावं ही दोन गावठाणे प्रभागात आहेत. मुंबईच्या विविध भागातून पुनर्वसन झालेल्या प्रकल्पग्रस्त इमारती सुध्दा आपल्या प्रभागात आहेत. प्रयाग नगर,प्रकाश नगर, ज्योती नगर हा झोपडपट्टी भाग असून एम एस ई बी आणि एच पी सी एल कॉलनी पूर्व आपल्या प्रभागात आहेत. वेगवेगळ्या रिफानरीने व विविध कंपन्यांनी आपला प्रभाग वेढलेला असून त्यांच्यामूळे निर्माण होणाऱ्या वाहतुककोंडीच्या समस्या स्थानिकांना भेडसावत आहेत. गेली 20 वर्षे शिवसेनेचे पदाधिकारी म्हणून काम करत असल्यामुळे प्रभागातील समस्यांची संपूर्ण माहिती होतीच."
+                android:textColor="#0F0F0F"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0F0F0F"
+                android:text=" निवडून आल्या नंतर समस्या निराकरण करण्यासाठी आवश्यक ते नियोजन सातत्यपूर्ण पाठपुरावा , महापालिकेच्या वेगवेगळ्या व्यासपीठांवर प्रश्न मांडून, विविध आयुधांचा उपयोग करून अनेक समस्यांवर मात करण्यात आम्हाला यश मिळाले.अनेक वर्षांपासून प्रभागातील नागरी वस्त्यांमध्ये रस्त सुधारनांचे काम झाले न्हवते. नियोजनात्मक परिश्रमामुळे विष्णू नगर येथील रस्ता सुधारण्याचे काम पूर्ण झाले असून गव्हाणगाव, भारत नगर येथील कामाला सुरुवात झाली आहे. आणिकगावातील काम सुद्धा महाशिवरात्री नंतर सुरू करण्यात येईल. या कामांमुळे रहिवाशांना मोठा दिलासा मिळणार आहे. विष्णू नगर येथे मुंबई महानगरपालिकेचे आरोग्य केंद्र व दवाखाना सुरू केल्यामुळे स्थानिक नागरिकांना त्याचा लाभ होत आहे.प्रयाग नगर आणि प्रकाश नगर येथील लोकांच्या आरोग्याला हानी पोहचवणार प्रदूषणकारी आर एम सी प्लांट बंद करण्यास आम्हाला विशेष परिश्रम करावे लागले."
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0F0F0F"
+                android:text="सध्या न्यायालयात ही लढाई सुरू आहे.निवडून आल्या नंतर बी डी पाटील मार्ग व एल यू गडकरी मार्ग सिमेंट काँक्रीटीकरण पर्जन्य नाले व मॉनिसारण वहिनी साहिती व्हावा यासाठी सातत्याने प्रयन्त करून सदर कामाची प्रशासकीय मंजुरी मिळवली असून निविदा प्रक्रिया पूर्ण झाल्यानंतर हे काम सुरू होईल व हजारो नागरिकांचा प्रवास हा सुरक्षित व सुकर होईल.महापालिकेच्या प्रकल्पग्रस्त इमारतींची अवस्था गुराढोरांच्या कोंडवड्यापेक्षासुद्धा दयनीय झाली होती. जागरूकतेने प्रयत्नेपूर्वक काम। केल्यामुळे सदर इमारती च्या सभोवतालच्या परिसराचे सुधारणा काम हाती घेतल्यामुळे स्थानिक जनता सुखावली आहे.प्रभागातील जवळ जवळ 90% शौचालये ही जीर्ण झाली असून ती तोडून नवीन बांधणे अत्यन्त गरजेचे होते."
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0F0F0F"
+                android:text="ती सर्वच महापालिकेने धोकादायक घोषित केली होती. प्रभागात नवीन शौचालये बांधने हे एक आव्हान होते. महापालिकेच्या वतीने भारत नगर येथील चार शौचालये तोडून नवीन बांधण्याच्या कामास सुरवात झाली असून गव्हाणगाव,आणिक गाव व  इतर ठिकाणी लवकरच कामाला सुरुवात करण्यात येईल.  ही ठळक कामे करत असतानाच प्रभागात लागणाऱ्या मूलभूत गरजा नालेसफाई, पाणी व्यवस्था, मार्गिका, पायवाट, अंतर्गत रस्ते , शौचालये, रस्त्यावरील दिव्यांची व्यवस्था आदी कामे प्रभागात झाली  आहेत तसेच काही सुरू आहेत. आणि बऱ्याच कामना प्रशासकीय मंजुरी मिळवून घेण्यात आम्हास यश मिळाले आहे. ही विविध कामे करताना स्थानिक नागरिक महानगररपालिकेचे अधिकारी, कर्मचारी, पोलीस प्रशासन सर्वच सन्माननीय व्यक्ती , शिवसेनेचे पदाधिकारी व शिवसैनिक यांचे वेळोवेळी लाभलेले मार्गदर्शन व सहकार्य यामुळेच आम्ही ही कामे करण्यात यशस्वी झालो. असाच आमच्यावरीळ लोभ कायम राहावा ही ईश्वर चरणी प्रार्थना. "
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0F0F0F"
+                android:text="प्रभागात काम करत असताना जात, पात, पक्ष, धर्म असा भेदाभेद नकरता काम करणे ही बाळासाहेबांची शिकवून उराशी बाळगून समाजातील सर्वच स्तरातील लोकांसाठी आम्ही सदैव काम करत आहोत. शिवसेना पक्षप्रमुख उध्दव साहेब ठाकरे यांनी आम्हाला संधी दिल्यामुळेचं  आम्ही आपली लोकप्रतिनिधी म्हणून सेवा करू शकलो आणि यापुढेही अविरत सेवा करीत राहू."
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="धन्यवाद!"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="आपले नम्र"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="सौ. निधी प्रमोद शिंदे"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="श्री. प्रमोद वसंत शिंदे"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/bottombar"
+        android:backgroundTint="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btnfacebok"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/spnnierbackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/facebook" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btninstagram"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bottombar"
+                android:backgroundTint="@color/colorPrimary"
+                android:scaleType="fitXY"
+                android:src="@drawable/instagram" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btntwitter"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="27dp"
+                android:background="@drawable/spnnierbackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/twitter" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btnweb"
+                android:layout_width="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="30dp"
+                android:background="@drawable/spnnierbackground"
+                android:backgroundTint="@color/colorPrimary"
+                android:scaleType="fitXY"
+                android:src="@drawable/web" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btnyoutube"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/spnnierbackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/fullsizeyoutube" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

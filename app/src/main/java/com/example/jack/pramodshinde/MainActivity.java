@@ -1,17 +1,22 @@
 package com.example.jack.pramodshinde;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -25,23 +30,23 @@ import com.example.jack.pramodshinde.activity.ContactActivity;
 import com.example.jack.pramodshinde.activity.GalleryActivity;
 import com.example.jack.pramodshinde.activity.JobActivity;
 import com.example.jack.pramodshinde.activity.WorkActivity;
+import com.example.jack.pramodshinde.marathiActivit.MarathiMainActivity;
 
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity  implements
-        AdapterView.OnItemSelectedListener {
-    String[] country = { "English", "Hindi", "China", "Japan", "Other"};
-   // List<String> language = new ArrayList<>();
-
-
+public class MainActivity extends AppCompatActivity {
+    private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
+    private long mBackPressed;
 
 
+    ImageButton facebook,insta,web,twitter,youtube;
 
+    Locale myLocale;
 
-
-    String mono = "9763767218";
+    String mono = "7447766109";
     Spinner spinner;
     Toolbar toolbar;
     ImageView lblcall;
@@ -49,72 +54,52 @@ public class MainActivity extends AppCompatActivity  implements
     LinearLayout linearLayout,linearLayout1,linearLayout2,linearLayout3,linearLayout4,linearLayout5,linearLayout6;
 
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.facebook:
-                    Intent login = new Intent(Intent.ACTION_VIEW);
-                    login.setData(Uri.parse("https://www.facebook.com/public/Pramod-Shinde"));
-                    startActivity(login);
-                    return true;
-                case R.id.web:
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("https://www.youtube.com/results?search_query=pramod+shinde+pune"));
-                    startActivity(intent);
-                    return true;
-                case R.id.twitter:
-                    Intent intent2 = new Intent(Intent.ACTION_VIEW);
-                    intent2.setData(Uri.parse("https://twitter.com/pramodshinde"));
-                    startActivity(intent2);
-                    return true;
-
-                case R.id.youtube:
-                    Intent intent3 = new Intent(Intent.ACTION_VIEW);
-                    intent3.setData(Uri.parse("https://www.youtube.com/results?search_query=pramod+shinde+pune"));
-                    startActivity(intent3);
-            }
-            return false;
-        }
-    };
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
 
 
 
         spinner = findViewById(R.id.spnnier);
         List<String> language =  new ArrayList<String>();
-        language.add(0,"select language");
+        language.add(0,"Select Language");
+       // language.add("English");
         language.add("Marathi");
-        language.add("Hindi");
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,language);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                spinner.setSelection(i);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
 
-                if (i==1)
+
+
+
+
+//
+                if (position==1)
                 {
-                    Toast.makeText(getApplicationContext(),"you select Marathi",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, MarathiMainActivity.class);
+                    Toast.makeText(getApplicationContext(), "निवडलेली भाषा मराठी",Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+
+
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"you select Hindi",Toast.LENGTH_SHORT).show();
-                }
+//
+//
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+                Toast.makeText(getApplicationContext(),"निवडलेली भाषा मराठी",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -162,7 +147,9 @@ public class MainActivity extends AppCompatActivity  implements
         linearLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent job = new Intent(MainActivity.this, JobActivity.class);
+               // String url = "https://portal.mcgm.gov.in/irj/portal/anonymous?NavigationTarget=navurl://6b24cfc8a981ecd7d877601622c34785https://portal.mcgm.gov.in/irj/portal/anonymous?NavigationTarget=navurl://6b24cfc8a981ecd7d877601622c34785";
+                Intent job = new Intent(MainActivity.this,JobActivity.class);
+              //  job.setData(Uri.parse("https://portal.mcgm.gov.in/irj/portal/anonymous?NavigationTarget=navurl://6b24cfc8a981ecd7d877601622c34785https://portal.mcgm.gov.in/irj/portal/anonymous?NavigationTarget=navurl://6b24cfc8a981ecd7d877601622c34785"));
                 startActivity(job);
             }
         });
@@ -199,18 +186,85 @@ public class MainActivity extends AppCompatActivity  implements
         });
 
 
+        facebook = findViewById(R.id.btnfacebok);
+        insta = findViewById(R.id.btninstagram);
+        twitter = findViewById(R.id.btntwitter);
+        web = findViewById(R.id.btnweb);
+        youtube = findViewById(R.id.btnyoutube);
+
+
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent facebook = new Intent(Intent.ACTION_VIEW);
+                facebook.setData(Uri.parse("https://www.facebook.com/nidhi.shinde.5817"));
+                startActivity(facebook);
+            }
+        });
+
+        insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent insta = new Intent(Intent.ACTION_VIEW);
+                insta.setData(Uri.parse("https://www.facebook.com/public/Pramod-Shinde"));
+                startActivity(insta);
+            }
+        });
+        twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent twitter =  new Intent(Intent.ACTION_VIEW);
+                twitter.setData(Uri.parse("https://twitter.com/pramodshinde"));
+                startActivity(twitter);
+            }
+        });
+        web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent web = new Intent(Intent.ACTION_VIEW);
+                web.setData(Uri.parse("https://www.youtube.com/results?search_query=pramod+shinde+pune"));
+                startActivity(web);
+            }
+        });
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent you  = new Intent(Intent.ACTION_VIEW);
+                you.setData(Uri.parse("https://www.youtube.com/results?search_query=pramod+shinde+pune"));
+            }
+        });
+
+
 
 
     }
+    public void setLocale(String lang) {
 
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        myLocale = new Locale(lang);
+
+        Resources res = getResources();
+
+        DisplayMetrics dm = res.getDisplayMetrics();
+
+        Configuration conf = res.getConfiguration();
+
+        conf.locale = myLocale;
+
+        res.updateConfiguration(conf, dm);
+
+        Intent refresh = new Intent(this, MainActivity.class);
+
+        startActivity(refresh);
 
     }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
+
+
 }
